@@ -1,0 +1,629 @@
+<title>Lexus Galanti Ads</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+:root{
+  color-scheme: light;
+  --ground:#f1f3f5; --surface:#ffffff; --surface-2:#e9edf0; --surface-3:#f7f9fa;
+  --ink:#0f1418; --ink-2:#525c65; --ink-3:#7f8992; --line:#dce1e6; --line-2:#eaeef1;
+  --accent:#1c5cab; --accent-soft:#e7effa;
+  --s1:#2a78d6; --s2:#eb6834;
+  --good:#0ca30c; --warn:#fab219; --crit:#d03b3b;
+  --shadow:0 1px 2px rgba(15,20,24,.06),0 8px 24px -16px rgba(15,20,24,.28);
+  --r:10px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --ground:#0d1013; --surface:#161a1e; --surface-2:#1f252b; --surface-3:#12161a;
+    --ink:#eef2f5; --ink-2:#a3adb5; --ink-3:#6f7982; --line:#262d34; --line-2:#1e242a;
+    --accent:#3987e5; --accent-soft:#16273d;
+    --s1:#3987e5; --s2:#d95926;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 28px -18px rgba(0,0,0,.8);
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --ground:#0d1013; --surface:#161a1e; --surface-2:#1f252b; --surface-3:#12161a;
+  --ink:#eef2f5; --ink-2:#a3adb5; --ink-3:#6f7982; --line:#262d34; --line-2:#1e242a;
+  --accent:#3987e5; --accent-soft:#16273d;
+  --s1:#3987e5; --s2:#d95926;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 28px -18px rgba(0,0,0,.8);
+}
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-size:15px; line-height:1.55; -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px 72px}
+h1,h2,h3{font-family:Archivo,"IBM Plex Sans",sans-serif;text-wrap:balance;margin:0}
+.mono{font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+.num{font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+
+/* ---- header ---- */
+header{border-bottom:1px solid var(--line);background:var(--surface);}
+.hd{max-width:1180px;margin:0 auto;padding:26px 24px 22px;display:flex;flex-wrap:wrap;gap:20px;align-items:flex-end;justify-content:space-between}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin:0 0 6px}
+h1{font-size:31px;font-weight:700;letter-spacing:-.022em;line-height:1.1}
+.sub{color:var(--ink-2);font-size:14px;margin-top:5px}
+.hd-meta{display:flex;gap:26px;flex-wrap:wrap}
+.hd-meta div{min-width:96px}
+.hd-meta .k{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+.hd-meta .v{font-family:"IBM Plex Mono",monospace;font-size:14px;color:var(--ink);margin-top:2px;font-variant-numeric:tabular-nums}
+
+/* ---- sections ---- */
+section{margin-top:44px}
+.sec-hd{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:14px;flex-wrap:wrap}
+h2{font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);font-family:"IBM Plex Mono",monospace}
+.sec-note{font-size:13px;color:var(--ink-3);max-width:56ch}
+
+/* ---- kpi ---- */
+.hero{display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-top:28px;box-shadow:var(--shadow)}
+.hero>div{background:var(--surface);padding:20px 22px}
+.hero .lbl{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-3)}
+.hero .big{font-family:Archivo,sans-serif;font-weight:700;font-size:38px;letter-spacing:-.03em;line-height:1.08;margin-top:8px;font-variant-numeric:tabular-nums}
+.hero .big small{font-size:19px;font-weight:600;color:var(--ink-2);letter-spacing:0}
+.hero .foot{font-size:13px;color:var(--ink-2);margin-top:7px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-top:0;border-radius:0 0 var(--r) var(--r);overflow:hidden;margin-top:-1px;box-shadow:var(--shadow)}
+.tile{background:var(--surface);padding:15px 18px 16px}
+.tile .lbl{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-3)}
+.tile .v{font-family:"IBM Plex Mono",monospace;font-size:22px;font-weight:500;margin-top:5px;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.tile .h{font-size:12.5px;color:var(--ink-3);margin-top:3px}
+
+/* ---- cards ---- */
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow)}
+.card-hd{padding:16px 20px 0}
+.card-hd h3{font-size:16px;font-weight:600;letter-spacing:-.01em}
+.card-hd p{margin:4px 0 0;font-size:13px;color:var(--ink-3)}
+.card-bd{padding:10px 12px 16px}
+
+/* ---- legend ---- */
+.legend{display:flex;gap:16px;flex-wrap:wrap;padding:0 20px;margin-top:10px}
+.legend span{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;color:var(--ink-2)}
+.sw{width:11px;height:11px;border-radius:3px;flex:none}
+
+/* ---- chart ---- */
+.chart{position:relative}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+.tip{position:absolute;pointer-events:none;opacity:0;transition:opacity .1s;background:var(--surface);border:1px solid var(--line);border-radius:8px;box-shadow:var(--shadow);padding:9px 11px;font-size:12.5px;min-width:150px;z-index:5}
+.tip .t-d{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);margin-bottom:5px}
+.tip .t-r{display:flex;justify-content:space-between;gap:18px;line-height:1.7}
+.tip .t-r b{font-family:"IBM Plex Mono",monospace;font-weight:500;font-variant-numeric:tabular-nums}
+.tip .t-k{display:inline-flex;align-items:center;gap:6px;color:var(--ink-2)}
+
+/* ---- tables ---- */
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r);background:var(--surface);box-shadow:var(--shadow)}
+table{border-collapse:collapse;width:100%;min-width:720px;font-size:13.5px}
+th{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3);font-weight:500;text-align:right;padding:12px 12px;border-bottom:1px solid var(--line);white-space:nowrap;background:var(--surface-3)}
+th:first-child,td:first-child{text-align:left}
+td{padding:11px 12px;border-bottom:1px solid var(--line-2);text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+td.n{font-family:"IBM Plex Mono",monospace}
+tbody tr:last-child td{border-bottom:0}
+tbody tr:hover{background:var(--surface-3)}
+tfoot td{padding:11px 12px;border-top:1px solid var(--line);font-weight:600;background:var(--surface-3);font-family:"IBM Plex Mono",monospace}
+tfoot td:first-child{font-family:"IBM Plex Sans",sans-serif}
+.name{font-weight:500;max-width:270px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:block}
+.name small{display:block;font-weight:400;color:var(--ink-3);font-size:12px;letter-spacing:.01em}
+.pill{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:2.5px 7px;border-radius:999px;border:1px solid var(--line);color:var(--ink-2);background:var(--surface-2)}
+.pill.on{color:#fff;background:var(--good);border-color:transparent}
+.bar-cell{position:relative;min-width:120px}
+.bar-cell .bg{position:absolute;left:12px;right:12px;bottom:6px;height:3px;background:var(--surface-2);border-radius:2px}
+.bar-cell .fg{position:absolute;left:12px;bottom:6px;height:3px;background:var(--s1);border-radius:2px}
+.muted{color:var(--ink-3)}
+
+/* ---- split ---- */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.split>*{min-width:0}
+.card{min-width:0}
+.card-bd{min-width:0}
+.tw{max-width:100%}
+.plat{display:grid;gap:1px;background:var(--line)}
+.plat-row{background:var(--surface);padding:14px 20px;display:grid;grid-template-columns:104px 1fr auto;gap:16px;align-items:center}
+.plat-row .pn{font-weight:600;font-size:14px}
+.plat-row .pn small{display:block;font-weight:400;color:var(--ink-3);font-size:11.5px;font-family:"IBM Plex Mono",monospace}
+.track{height:8px;border-radius:4px;background:var(--surface-2);overflow:hidden}
+.track i{display:block;height:100%;background:var(--s1);border-radius:4px}
+.plat-row .pv{font-family:"IBM Plex Mono",monospace;font-size:13px;text-align:right;font-variant-numeric:tabular-nums}
+.plat-row .pv small{display:block;color:var(--ink-3);font-size:11.5px}
+
+/* ---- findings ---- */
+.finds{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.find{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px 20px 19px;box-shadow:var(--shadow);border-left:3px solid var(--accent)}
+.find.up{border-left-color:var(--good)} .find.down{border-left-color:var(--crit)} .find.mid{border-left-color:var(--warn)}
+.find .tag{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);display:flex;align-items:center;gap:6px}
+.find .tag i{width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none;font-style:normal}
+.find.up .tag i{background:var(--good)} .find.down .tag i{background:var(--crit)} .find.mid .tag i{background:var(--warn)}
+.find h3{font-size:17px;font-weight:600;letter-spacing:-.015em;margin:9px 0 6px}
+.find p{margin:0;font-size:13.5px;color:var(--ink-2);line-height:1.6}
+.find .stat{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--ink);margin-top:10px;padding-top:10px;border-top:1px solid var(--line-2);font-variant-numeric:tabular-nums}
+
+details{margin-top:12px}
+summary{cursor:pointer;font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-3);padding:6px 0;list-style:none;display:inline-flex;align-items:center;gap:7px}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"+";font-size:14px;line-height:1}
+details[open] summary::before{content:"–"}
+summary:hover{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+
+footer{margin-top:52px;padding-top:20px;border-top:1px solid var(--line);font-size:12.5px;color:var(--ink-3);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr 1fr}
+  .hero>div:first-child{grid-column:1/-1}
+  .grid4{grid-template-columns:repeat(2,1fr)}
+  .split,.finds{grid-template-columns:1fr}
+  h1{font-size:26px}
+  .hero .big{font-size:32px}
+}
+@media (max-width:560px){
+  .wrap{padding:0 16px 56px} .hd{padding:22px 16px 18px}
+  .hero{grid-template-columns:1fr} .grid4{grid-template-columns:1fr 1fr}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+<header>
+  <div class="hd">
+    <div>
+      <p class="eyebrow">Reporte de cuenta publicitaria · Meta Ads</p>
+      <h1>Lexus Paraguay — Francisco Galanti</h1>
+      <p class="sub">Histórico completo de la cuenta <span class="mono">LEXUS GALANTI</span> desde su primera entrega.</p>
+    </div>
+    <div class="hd-meta">
+      <div><div class="k">Período</div><div class="v">14 abr – 25 ago 2026</div></div>
+      <div><div class="k">Días con entrega</div><div class="v">104 de 133</div></div>
+      <div><div class="k">Moneda</div><div class="v">PYG (₲)</div></div>
+      <div><div class="k">Cuenta</div><div class="v">1490676522471086</div></div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="hero">
+    <div>
+      <div class="lbl">Inversión total</div>
+      <div class="big">₲&nbsp;4.862.015</div>
+      <div class="foot">Promedio de <b class="num">₲ 46.750</b> por día con entrega · saldo disponible ₲ 95.455</div>
+    </div>
+    <div>
+      <div class="lbl">Contactos generados</div>
+      <div class="big">304</div>
+      <div class="foot">256 conversaciones iniciadas + 48 formularios completados</div>
+    </div>
+    <div>
+      <div class="lbl">Costo por contacto</div>
+      <div class="big">₲&nbsp;15.993</div>
+      <div class="foot">Todo el gasto de la cuenta dividido por los 304 contactos</div>
+    </div>
+  </div>
+
+  <div class="grid4">
+    <div class="tile"><div class="lbl">Alcance</div><div class="v">157.313</div><div class="h">personas únicas</div></div>
+    <div class="tile"><div class="lbl">Impresiones</div><div class="v">469.193</div><div class="h">frecuencia 2,98</div></div>
+    <div class="tile"><div class="lbl">Clics (todos)</div><div class="v">11.201</div><div class="h">CTR 2,39%</div></div>
+    <div class="tile"><div class="lbl">Clics en el enlace</div><div class="v">8.160</div><div class="h">CPC ₲ 434</div></div>
+    <div class="tile"><div class="lbl">CPM</div><div class="v">₲ 10.363</div><div class="h">costo por mil impresiones</div></div>
+    <div class="tile"><div class="lbl">Interacciones</div><div class="v">61.633</div><div class="h">con las publicaciones</div></div>
+    <div class="tile"><div class="lbl">Reproducciones</div><div class="v">51.921</div><div class="h">de video</div></div>
+    <div class="tile"><div class="lbl">Campañas</div><div class="v">10</div><div class="h">1 activa · 24 anuncios</div></div>
+  </div>
+
+  <section>
+    <div class="sec-hd">
+      <h2>Evolución diaria</h2>
+      <p class="sec-note">Los días sin barra son días sin entrega: la cuenta estuvo pausada.</p>
+    </div>
+    <div class="card">
+      <div class="card-hd">
+        <h3>Inversión por día</h3>
+        <p>Pico de ₲ 128.948 el 19 de mayo. Julio concentró ₲ 1.738.101, el 36% de todo el histórico.</p>
+      </div>
+      <div class="card-bd"><div class="chart" id="c-spend"><div class="tip" id="t-spend"></div></div></div>
+    </div>
+
+    <div class="card" style="margin-top:20px">
+      <div class="card-hd">
+        <h3>Contactos por día</h3>
+        <p>Conversaciones iniciadas y formularios completados, día por día.</p>
+      </div>
+      <div class="legend">
+        <span><i class="sw" style="background:var(--s1)"></i>Conversaciones iniciadas</span>
+        <span><i class="sw" style="background:var(--s2)"></i>Formularios (leads)</span>
+      </div>
+      <div class="card-bd"><div class="chart" id="c-res"><div class="tip" id="t-res"></div></div></div>
+    </div>
+
+    <details>
+      <summary>Ver los datos mes a mes</summary>
+      <div class="tw" style="margin-top:10px">
+        <table>
+          <thead><tr><th>Mes</th><th>Inversión</th><th>Impresiones</th><th>Clics</th><th>Conversaciones</th><th>Leads</th><th>Costo / contacto</th></tr></thead>
+          <tbody>
+            <tr><td>Abril <span class="muted">(desde el 14)</span></td><td class="n">₲ 486.394</td><td class="n">46.153</td><td class="n">1.189</td><td class="n">24</td><td class="n">0</td><td class="n">₲ 20.266</td></tr>
+            <tr><td>Mayo</td><td class="n">₲ 815.731</td><td class="n">58.917</td><td class="n">1.661</td><td class="n">62</td><td class="n">15</td><td class="n">₲ 10.594</td></tr>
+            <tr><td>Junio</td><td class="n">₲ 905.156</td><td class="n">86.197</td><td class="n">2.097</td><td class="n">54</td><td class="n">14</td><td class="n">₲ 13.311</td></tr>
+            <tr><td>Julio</td><td class="n">₲ 1.738.101</td><td class="n">213.735</td><td class="n">4.341</td><td class="n">64</td><td class="n">16</td><td class="n">₲ 21.726</td></tr>
+            <tr><td>Agosto <span class="muted">(hasta el 24)</span></td><td class="n">₲ 916.633</td><td class="n">64.191</td><td class="n">1.913</td><td class="n">52</td><td class="n">3</td><td class="n">₲ 16.666</td></tr>
+          </tbody>
+          <tfoot><tr><td>Total</td><td>₲ 4.862.015</td><td>469.193</td><td>11.201</td><td>256</td><td>48</td><td>₲ 15.993</td></tr></tfoot>
+        </table>
+      </div>
+    </details>
+  </section>
+
+  <section>
+    <div class="sec-hd">
+      <h2>Campañas</h2>
+      <p class="sec-note">Ordenadas por inversión. El costo por contacto sólo se calcula donde hubo contactos.</p>
+    </div>
+    <div class="tw">
+      <table id="tbl-camp">
+        <thead><tr>
+          <th>Campaña</th><th>Estado</th><th>Inversión</th><th>Impres.</th><th>Alcance</th>
+          <th>CTR</th><th>CPM</th><th>Frec.</th><th>Contactos</th><th>Costo / contacto</th>
+        </tr></thead>
+        <tbody></tbody>
+        <tfoot><tr><td>10 campañas</td><td></td><td>₲ 4.862.015</td><td>469.193</td><td>157.313</td><td>2,39%</td><td>₲ 10.363</td><td>2,98</td><td>304</td><td>₲ 15.993</td></tr></tfoot>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-hd">
+      <h2>Anuncios</h2>
+      <p class="sec-note">Los 24 anuncios de la cuenta, ordenados por inversión.</p>
+    </div>
+    <div class="tw">
+      <table id="tbl-ads">
+        <thead><tr>
+          <th>Anuncio</th><th>Inversión</th><th>Impres.</th><th>Alcance</th><th>CTR</th><th>CPM</th>
+          <th>Clics enlace</th><th>Contactos</th><th>Costo / contacto</th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-hd">
+      <h2>Dónde se mostraron los anuncios</h2>
+      <p class="sec-note">Instagram se llevó dos tercios del presupuesto; Facebook rindió mejor por contacto.</p>
+    </div>
+    <div class="split">
+      <div class="card">
+        <div class="card-hd"><h3>Reparto de la inversión</h3><p>Por plataforma de publicación.</p></div>
+        <div class="card-bd" style="padding:14px 0 0"><div class="plat" id="plat"></div></div>
+      </div>
+      <div class="card">
+        <div class="card-hd"><h3>Rendimiento comparado</h3><p>Mismo presupuesto, resultados distintos.</p></div>
+        <div class="card-bd" style="padding:6px 0 0">
+          <div class="tw" style="border:0;border-radius:0;box-shadow:none">
+            <table style="min-width:0">
+              <thead><tr><th>Plataforma</th><th>CTR</th><th>CPM</th><th>Contactos</th><th>Costo / contacto</th></tr></thead>
+              <tbody id="plat-tbl"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-hd">
+      <h2>A quién le llegaron</h2>
+      <p class="sec-note">El CTR sube con la edad; el costo por contacto es más parejo de lo que sugiere el gasto.</p>
+    </div>
+    <div class="split">
+      <div class="card">
+        <div class="card-hd"><h3>Por edad</h3><p>La barra marca la porción de la inversión.</p></div>
+        <div class="card-bd" style="padding:6px 0 0">
+          <div class="tw" style="border:0;border-radius:0;box-shadow:none">
+            <table style="min-width:0">
+              <thead><tr><th>Edad</th><th>Inversión</th><th>CTR</th><th>Contactos</th><th>Costo / contacto</th></tr></thead>
+              <tbody id="age-tbl"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-hd"><h3>Por género</h3><p>73% del presupuesto fue a hombres, y ahí se generó el 82% de los contactos.</p></div>
+        <div class="card-bd" style="padding:14px 0 0"><div class="plat" id="gen"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-hd">
+      <h2>Lecturas del período</h2>
+      <p class="sec-note">Lo que los números dicen y qué haría distinto en el próximo ciclo.</p>
+    </div>
+    <div class="finds">
+      <div class="find up">
+        <div class="tag"><i></i>Lo más eficiente</div>
+        <h3>Las campañas de mensajes cuestan cuatro veces menos por contacto</h3>
+        <p>“Campaña (Mensajes) 27 may” generó 79 conversaciones a ₲ 5.813 cada una. La campaña activa de WhatsApp, con casi cuatro veces más presupuesto, las trae a ₲ 16.475. El formato de mensaje directo es el que mejor convierte en esta cuenta.</p>
+        <div class="stat">₲ 5.813 vs ₲ 16.475 por conversación</div>
+      </div>
+      <div class="find mid">
+        <div class="tag"><i></i>Señal de saturación</div>
+        <h3>La campaña activa ya va por la cuarta impresión a la misma persona</h3>
+        <p>“Lexus Paraguay | WhatsApp” acumula frecuencia 3,74 sobre un alcance de apenas 11.630 personas, y es la de CPM más alto de la cuenta (₲ 41.701). Está pagando cada vez más por repetirle el mismo aviso a la misma gente: conviene ampliar el público o refrescar los creativos.</p>
+        <div class="stat">Frecuencia 3,74 · CPM ₲ 41.701 · alcance 11.630</div>
+      </div>
+      <div class="find up">
+        <div class="tag"><i></i>Formularios</div>
+        <h3>“RX 350h | Formulario” es la vía más barata a un lead</h3>
+        <p>15 formularios completados con ₲ 225.353, es decir ₲ 15.024 cada uno, contra ₲ 25.650 de la campaña de Leads posterior. El anuncio del RX 350h con formulario nativo es el que más conviene volver a poner al aire.</p>
+        <div class="stat">₲ 15.024 por lead · 15 de los 48 del período</div>
+      </div>
+      <div class="find down">
+        <div class="tag"><i></i>Presupuesto sin retorno</div>
+        <h3>El público de 18 a 24 años consumió ₲ 275.345 y no dejó un solo formulario</h3>
+        <p>Es el segmento con el CTR más bajo (1,79%) y con el costo por contacto más alto (₲ 25.031). Recorta bien con el ticket de un Lexus: excluirlo libera presupuesto para los tramos de 45 a 64, que tienen el doble de CTR.</p>
+        <div class="stat">18–24: 1,79% CTR · 0 leads · ₲ 25.031 por contacto</div>
+      </div>
+      <div class="find up">
+        <div class="tag"><i></i>Plataforma</div>
+        <h3>Facebook trae contactos un 38% más baratos que Instagram</h3>
+        <p>Con la mitad del presupuesto de Instagram, Facebook generó 112 contactos a ₲ 14.212 contra ₲ 23.079. También duplica el CTR (3,86% vs 1,87%). Vale la pena testear un reparto manual de ubicaciones en lugar de dejarlo automático.</p>
+        <div class="stat">Facebook ₲ 14.212 · Instagram ₲ 23.079 por contacto</div>
+      </div>
+      <div class="find">
+        <div class="tag"><i></i>Alcance barato</div>
+        <h3>Las historias de CADAM compraron visibilidad a precio de saldo</h3>
+        <p>₲ 119.468 para 46.126 impresiones y 21.959 personas alcanzadas: CPM ₲ 2.590 y clics al enlace a ₲ 111. No genera contactos, pero como pieza de presencia de marca durante el salón es el mejor uso de presupuesto del período.</p>
+        <div class="stat">CPM ₲ 2.590 · 1.077 clics al enlace a ₲ 111</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>Datos extraídos de la API de Meta Ads · cuenta LEXUS GALANTI · 25 de agosto de 2026</span>
+    <span class="mono">Atribución estándar de Meta · conversaciones a 7 días</span>
+  </footer>
+</div>
+<script>
+const DATA={"daily":[["04-14",12219,2037,61,1857,0,0,46],["04-15",22147,3579,119,3100,0,0,82],["04-16",49685,4775,139,4269,2,0,88],["04-17",64095,5507,158,4805,6,0,112],["04-18",45810,4897,102,4456,3,0,78],["04-19",65599,6176,147,5671,3,0,119],["04-20",60877,6149,118,5487,2,0,86],["04-21",72171,5381,146,4905,4,0,116],["04-22",66123,5431,158,5018,3,0,117],["04-23",27668,2221,41,2038,1,0,28],["04-24",0,0,0,0,0,0,0],["05-13",33550,5632,158,4813,0,0,108],["05-14",43504,7964,214,6495,0,0,133],["05-15",43499,9481,190,7977,0,0,157],["05-16",41765,3928,93,3412,0,0,52],["05-17",110828,4489,133,3119,7,0,56],["05-18",106295,4619,114,3359,4,8,51],["05-19",128948,5781,147,4340,8,2,60],["05-20",47973,1587,41,1374,3,5,17],["05-21",0,0,0,0,1,0,0],["05-22",15620,906,26,671,1,0,12],["05-23",54919,2311,59,1664,2,0,26],["05-25",25185,936,20,782,0,0,10],["05-27",0,0,0,0,1,0,0],["05-29",48256,3242,148,2356,7,0,62],["05-30",68857,4256,177,2901,14,0,105],["05-31",46532,3785,141,2737,14,0,93],["06-01",44536,3425,116,2384,5,0,70],["06-02",46247,3255,107,2249,3,0,64],["06-03",42681,3106,139,2215,8,0,87],["06-04",37923,2826,68,1939,2,0,45],["06-05",32575,2369,83,1728,10,0,48],["06-06",29506,2240,72,1648,5,0,43],["06-07",50095,3649,100,2466,9,0,60],["06-08",11993,727,16,575,2,0,10],["06-09",0,0,0,0,0,0,0],["06-10",0,0,0,0,0,0,0],["06-15",18397,3094,104,2772,0,0,84],["06-16",77273,9924,192,8502,1,0,178],["06-17",29193,3492,124,3097,1,0,99],["06-18",21798,5210,144,4474,0,0,139],["06-19",19556,4019,92,3650,0,0,84],["06-20",18665,3958,79,3581,1,0,77],["06-21",28371,6715,101,6295,0,0,94],["06-22",27870,6355,140,5688,0,0,118],["06-23",13471,2974,71,2819,0,0,71],["06-24",26770,1060,29,778,0,1,10],["06-25",24433,1502,27,1041,0,0,8],["06-26",69942,3398,91,1870,3,5,40],["06-27",53700,3254,59,2172,0,0,26],["06-28",62648,3315,53,2170,2,4,30],["06-29",59004,3392,36,2282,0,0,21],["06-30",58509,2938,54,2089,2,4,30],["07-01",31675,1375,22,992,0,1,9],["07-02",10971,484,7,338,0,1,4],["07-03",8789,335,4,243,0,0,2],["07-04",3951,308,2,241,0,0,1],["07-06",0,0,0,0,0,0,0],["07-08",76928,11243,274,8953,2,0,229],["07-09",110560,13905,276,11428,3,2,225],["07-10",97850,13950,271,11972,2,0,230],["07-11",89143,11366,254,9790,6,1,210],["07-12",104873,12669,301,10926,6,2,252],["07-13",99733,13918,245,12214,3,0,200],["07-14",98349,14428,246,13313,1,1,208],["07-15",93229,13088,212,11749,7,2,183],["07-16",91963,13952,234,12601,3,0,203],["07-17",74356,10887,194,9394,0,0,171],["07-18",53175,8267,170,7715,2,0,157],["07-19",111559,16013,291,13658,2,2,261],["07-20",83070,9143,205,8152,6,0,157],["07-21",72471,7554,182,6802,1,0,142],["07-22",67489,6778,169,6068,4,2,120],["07-23",60590,5426,130,4751,3,0,98],["07-24",49061,5559,151,4989,2,1,125],["07-25",31095,5035,103,4722,1,0,89],["07-26",82324,8707,192,7434,2,0,155],["07-27",80573,6918,150,5847,6,1,113],["07-28",54324,2427,56,2148,1,0,42],["07-29",0,0,0,0,1,0,0],["07-30",0,0,0,0,0,0,0],["08-01",0,0,0,0,0,0,0],["08-03",0,0,0,0,0,0,0],["08-04",11187,4758,139,4030,0,0,115],["08-05",19670,8370,227,6701,0,0,174],["08-06",20511,8399,232,6687,0,0,193],["08-07",18033,5851,211,4970,0,0,184],["08-08",18248,6142,178,5220,0,0,156],["08-09",28861,11598,290,9936,2,0,232],["08-10",2958,1008,28,980,0,0,23],["08-11",58518,1528,59,987,3,1,7],["08-12",63510,1513,48,971,5,0,13],["08-13",68049,1455,51,1021,7,1,16],["08-14",70069,1560,44,1019,1,0,11],["08-15",74137,1668,53,1114,8,0,14],["08-16",53333,1393,37,886,2,0,6],["08-17",62599,1294,51,801,2,0,7],["08-18",58868,1245,36,776,2,0,10],["08-19",60355,1218,45,863,6,0,12],["08-20",43260,956,40,696,1,0,12],["08-21",29110,573,17,400,1,0,2],["08-22",27990,814,25,632,1,0,9],["08-23",63430,1476,41,1069,2,1,7],["08-24",63937,1372,61,925,9,0,21]],"campaigns":[["Lexus Paraguay | WhatsApp | Francisco Galanti","Ventas","ACTIVA",1812266,43459,11630,1472,3.39,41701,3.74,363,16,110,"08 jul"],["Campaña (Visitas) 08/07","Tráfico","PAUSADA",867405,229606,99361,4449,1.94,3778,2.31,4292,1,5,"15 jun"],["Campaña (Mensajes) 16 abr – 13 may","Interacción","PAUSADA",460588,13820,6195,337,2.44,33328,2.23,98,0,39,"16 abr"],["Campaña (Mensajes) 27 may","Ventas","PAUSADA",459201,32880,13446,1167,3.55,13966,2.45,687,0,79,"27 may"],["Lexus Paraguay | Leads | Francisco Galanti","Clientes potenciales","PAUSADA",410392,21361,7317,384,1.8,19212,2.92,181,16,7,"24 jun"],["Campaña (Visitas) 14 abr – 13 may","Tráfico","PAUSADA",356815,64051,31584,1588,2.48,5571,2.03,1247,0,0,"14 abr"],["RX 350h | Formulario","Clientes potenciales","PAUSADA",225353,11763,6370,354,3.01,19158,1.85,161,15,8,"16 may"],["CONVERSACIONES | CADAM 2026 | LEXUS | HISTORIAS","Interacción","PAUSADA",119468,46126,21959,1305,2.83,2590,2.1,1077,0,2,"04 ago"],["Lexus | WhatsApp | LBX-NX-RX-LX | Mayo","Interacción","PAUSADA",95724,4153,2618,105,2.53,23049,1.59,48,0,4,"22 may"],["Campaña (Mensajes) 15/06","Ventas","PAUSADA",54803,1974,1236,40,2.03,27762,1.6,6,0,2,"15 jun"]],"ads":[["Vídeo - Servicio Postventa","Campaña (Visitas) 08/07",567343,128960,66935,1.82,4399,2238,1,4],["RX 350H - Foto","Campaña (Mensajes) 27 mayo. 2026",459201,32880,13446,3.55,13966,687,0,79],["RX350H | Vídeo","Lexus Paraguay | WhatsApp | Francisco Galanti",456825,10585,4757,3.18,43158,86,3,23],["LBX | Vídeo","Lexus Paraguay | WhatsApp | Francisco Galanti",452458,9568,4280,4.74,47289,66,4,30],["RX500H F Sport  | Vídeo","Lexus Paraguay | WhatsApp | Francisco Galanti",451889,11938,4761,2.63,37853,76,3,24],["NX350H | Vídeo","Lexus Paraguay | WhatsApp | Francisco Galanti",451094,11368,5438,3.23,39681,135,6,33],["Vídeo - NX 350h vs RX 350h","Campaña (Mensajes) 16 abr. 26 - Mayo 13/26",326680,9499,4745,2.54,34391,72,0,31],["Vídeo - Experiencia Lexus (Entrega)","Campaña (Visitas) 08/07",300062,100646,48001,2.08,2981,2054,0,1],["Vídeo - NX 350","Campaña (Visitas)  Abril 14/26 - Mayo 13/26",235397,41165,23688,2.49,5718,854,0,0],["RX 350h","RX 350h | Formulario",225353,11763,6370,3.01,19158,161,15,8],["Vídeo - NX 350h","Campaña (Mensajes) 16 abr. 26 - Mayo 13/26",131743,4239,2599,2.19,31079,25,0,7],["Vídeo - RX 350h","Campaña (Visitas)  Abril 14/26 - Mayo 13/26",121418,22886,14913,2.46,5305,393,0,0],["CADAM 2026 | LEXUS | HISTORIAS","CONVERSACIONES | CADAM 2026 | LEXUS | HISTORIAS",119468,46126,21959,2.83,2590,1077,0,2],["RX 350h | Formulario","Lexus Paraguay | Leads | Francisco Galanti",104906,5146,2482,1.5,20386,32,6,3],["NX 350h | Formulario","Lexus Paraguay | Leads | Francisco Galanti",79484,4227,2525,1.7,18804,34,3,2],["RX 350h F Sport | Formulario","Lexus Paraguay | Leads | Francisco Galanti",77755,3185,1900,1.63,24413,28,1,0],["LBX | Formulario","Lexus Paraguay | Leads | Francisco Galanti",74349,4066,2285,1.4,18286,29,3,0],["LX 700h | Formulario","Lexus Paraguay | Leads | Francisco Galanti",73898,4737,2683,2.66,15600,58,3,2],["Vídeo - Valores Lexus","Campaña (Mensajes) 15/06",54803,1974,1236,2.03,27762,6,0,2],["NX 350H","Lexus | WhatsApp | LBX-NX-RX-LX | Mayo 2026",53050,2094,1558,2.44,25334,26,0,1],["LBX","Lexus | WhatsApp | LBX-NX-RX-LX | Mayo 2026",19584,892,702,2.02,21955,5,0,0],["LX 700h","Lexus | WhatsApp | LBX-NX-RX-LX | Mayo 2026",18426,910,672,3.3,20248,15,0,2],["RX 350H","Lexus | WhatsApp | LBX-NX-RX-LX | Mayo 2026",4664,257,203,2.33,18148,2,0,1],["Vídeo - RX 350h","Campaña (Mensajes) 16 abr. 26 - Mayo 13/26",2165,82,81,3.66,26402,1,0,1]],"platforms":[["Instagram",3207943,345133,121792,6465,1.87,9295,29,139],["Facebook",1591717,122228,43084,4719,3.86,13023,19,112],["WhatsApp",62355,1832,1586,17,0.93,34037,0,5]],"ages":[["18–24",275345,85926,34317,1536,1.79,3204,0,11],["25–34",1214612,182456,62412,3635,1.99,6657,13,69],["35–44",1404933,111542,34608,2792,2.5,12596,14,67],["45–54",998583,48085,13469,1553,3.23,20767,12,57],["55–64",631643,24924,8089,1025,4.11,25343,6,39],["65+",336671,16212,4978,657,4.05,20767,3,13]],"genders":[["Hombres",3563622,318286,96686,8076,2.54,11196,44,204],["Mujeres",1277677,149255,62271,3072,2.06,8560,4,52],["Sin definir",20716,1652,557,53,3.21,12540,0,0]]};
+(function(){
+  var G = function(n){ return "₲ " + n.toLocaleString("es-PY"); };
+  var N = function(n){ return n.toLocaleString("es-PY"); };
+  var P = function(n){ return n.toLocaleString("es-PY",{minimumFractionDigits:2,maximumFractionDigits:2}) + "%"; };
+  var F = function(n){ return n.toLocaleString("es-PY",{minimumFractionDigits:2,maximumFractionDigits:2}); };
+  var MES = ["ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic"];
+  var fecha = function(md){ var p = md.split("-"); return parseInt(p[1],10) + " " + MES[parseInt(p[0],10)-1]; };
+  var css = function(v){ return getComputedStyle(document.body).getPropertyValue(v).trim(); };
+
+  /* ---------- full daily series, gaps filled with zeros ---------- */
+  var map = {}; DATA.daily.forEach(function(d){ map[d[0]] = d; });
+  var series = [], cur = new Date(2026,3,14), end = new Date(2026,7,24);
+  while(cur <= end){
+    var md = String(cur.getMonth()+1).padStart(2,"0") + "-" + String(cur.getDate()).padStart(2,"0");
+    series.push(map[md] || [md,0,0,0,0,0,0,0]);
+    cur.setDate(cur.getDate()+1);
+  }
+
+  var SVGNS = "http://www.w3.org/2000/svg";
+  function el(t,a){ var e = document.createElementNS(SVGNS,t); for(var k in a) e.setAttribute(k,a[k]); return e; }
+
+  /* ---------- month tick positions ---------- */
+  function monthTicks(){
+    var out = [];
+    series.forEach(function(d,i){
+      var day = d[0].split("-")[1];
+      if(day === "01" || i === 0) out.push({i:i, l: MES[parseInt(d[0].split("-")[0],10)-1]});
+    });
+    return out;
+  }
+
+  /* ================= chart 1 : inversión diaria (área) ================= */
+  function spendChart(){
+    var host = document.getElementById("c-spend"), tip = document.getElementById("t-spend");
+    var W = 1000, H = 236, ml = 62, mr = 10, mt = 12, mb = 26;
+    var iw = W - ml - mr, ih = H - mt - mb;
+    var max = 140000, n = series.length;
+    var x = function(i){ return ml + (iw * (i + 0.5) / n); };
+    var y = function(v){ return mt + ih - (v / max) * ih; };
+    var svg = el("svg",{viewBox:"0 0 "+W+" "+H,role:"img","aria-label":"Inversión diaria en guaraníes, del 14 de abril al 24 de agosto de 2026"});
+
+    [0,35000,70000,105000,140000].forEach(function(v){
+      svg.appendChild(el("line",{x1:ml,x2:W-mr,y1:y(v),y2:y(v),stroke:css("--line"),"stroke-width":v===0?1.5:1}));
+      var t = el("text",{x:ml-10,y:y(v)+4,"text-anchor":"end",fill:css("--ink-3"),"font-size":11,"font-family":'"IBM Plex Mono",monospace'});
+      t.textContent = v === 0 ? "0" : (v/1000) + "k";
+      svg.appendChild(t);
+    });
+    monthTicks().forEach(function(t){
+      var g = el("text",{x:x(t.i),y:H-8,"text-anchor":"middle",fill:css("--ink-3"),"font-size":11,"font-family":'"IBM Plex Mono",monospace'});
+      g.textContent = t.l; svg.appendChild(g);
+    });
+
+    var dPath = "", aPath = "M " + x(0) + " " + y(0);
+    series.forEach(function(d,i){
+      dPath += (i ? " L " : "M ") + x(i).toFixed(1) + " " + y(d[1]).toFixed(1);
+      aPath += " L " + x(i).toFixed(1) + " " + y(d[1]).toFixed(1);
+    });
+    aPath += " L " + x(n-1) + " " + y(0) + " Z";
+
+    var grad = el("linearGradient",{id:"gsp",x1:0,y1:0,x2:0,y2:1});
+    var st1 = el("stop",{offset:"0%","stop-color":css("--s1"),"stop-opacity":.26});
+    var st2 = el("stop",{offset:"100%","stop-color":css("--s1"),"stop-opacity":.02});
+    grad.appendChild(st1); grad.appendChild(st2);
+    var defs = el("defs",{}); defs.appendChild(grad); svg.appendChild(defs);
+    svg.appendChild(el("path",{d:aPath,fill:"url(#gsp)"}));
+    svg.appendChild(el("path",{d:dPath,fill:"none",stroke:css("--s1"),"stroke-width":2,"stroke-linejoin":"round","stroke-linecap":"round"}));
+
+    var cross = el("line",{x1:0,x2:0,y1:mt,y2:mt+ih,stroke:css("--ink-3"),"stroke-width":1,"stroke-dasharray":"3 3",opacity:0});
+    var dot = el("circle",{r:4.5,fill:css("--s1"),stroke:css("--surface"),"stroke-width":2,opacity:0});
+    svg.appendChild(cross); svg.appendChild(dot);
+    var hit = el("rect",{x:ml,y:mt,width:iw,height:ih,fill:"transparent"});
+    svg.appendChild(hit);
+
+    function move(e){
+      var r = svg.getBoundingClientRect();
+      var px = (e.clientX - r.left) / r.width * W;
+      var i = Math.max(0, Math.min(n-1, Math.round((px - ml) / iw * n - 0.5)));
+      var d = series[i];
+      cross.setAttribute("x1",x(i)); cross.setAttribute("x2",x(i)); cross.setAttribute("opacity",1);
+      dot.setAttribute("cx",x(i)); dot.setAttribute("cy",y(d[1])); dot.setAttribute("opacity",1);
+      tip.innerHTML = '<div class="t-d">'+fecha(d[0])+'</div>'+
+        row("Inversión", G(d[1]), css("--s1"))+
+        row("Impresiones", N(d[2]), null)+
+        row("Clics", N(d[3]), null)+
+        row("Contactos", N(d[5]+d[6]), null);
+      tip.style.opacity = 1;
+      var lx = x(i) / W * r.width;
+      tip.style.left = Math.max(0, Math.min(r.width - 170, lx - 85)) + "px";
+      tip.style.top = "6px";
+    }
+    function out(){ tip.style.opacity = 0; cross.setAttribute("opacity",0); dot.setAttribute("opacity",0); }
+    svg.addEventListener("mousemove",move); svg.addEventListener("mouseleave",out);
+    host.insertBefore(svg, tip);
+  }
+
+  function row(k,v,c){
+    return '<div class="t-r"><span class="t-k">'+(c?'<i class="sw" style="background:'+c+'"></i>':'')+k+'</span><b>'+v+'</b></div>';
+  }
+
+  /* ================= chart 2 : contactos por día (barras apiladas) ================= */
+  function resChart(){
+    var host = document.getElementById("c-res"), tip = document.getElementById("t-res");
+    var W = 1000, H = 190, ml = 62, mr = 10, mt = 12, mb = 26;
+    var iw = W - ml - mr, ih = H - mt - mb;
+    var n = series.length, max = 12;
+    series.forEach(function(d){ max = Math.max(max, d[5] + d[6]); });
+    max = Math.ceil(max / 4) * 4;
+    var bw = iw / n, w = Math.max(3, bw - 2);
+    var y = function(v){ return mt + ih - (v / max) * ih; };
+    var svg = el("svg",{viewBox:"0 0 "+W+" "+H,role:"img","aria-label":"Conversaciones iniciadas y formularios completados por día"});
+
+    [0, max/2, max].forEach(function(v){
+      svg.appendChild(el("line",{x1:ml,x2:W-mr,y1:y(v),y2:y(v),stroke:css("--line"),"stroke-width":v===0?1.5:1}));
+      var t = el("text",{x:ml-10,y:y(v)+4,"text-anchor":"end",fill:css("--ink-3"),"font-size":11,"font-family":'"IBM Plex Mono",monospace'});
+      t.textContent = N(v); svg.appendChild(t);
+    });
+    monthTicks().forEach(function(t){
+      var g = el("text",{x:ml + bw*(t.i+0.5),y:H-8,"text-anchor":"middle",fill:css("--ink-3"),"font-size":11,"font-family":'"IBM Plex Mono",monospace'});
+      g.textContent = t.l; svg.appendChild(g);
+    });
+
+    series.forEach(function(d,i){
+      var bx = ml + bw*i + (bw-w)/2;
+      var base = mt + ih;
+      if(d[5] > 0){
+        var h1 = (d[5]/max)*ih;
+        svg.appendChild(el("rect",{x:bx,y:base-h1,width:w,height:h1,fill:css("--s1"),rx:1.5}));
+        base -= h1 + 2;
+      }
+      if(d[6] > 0){
+        var h2 = (d[6]/max)*ih;
+        svg.appendChild(el("rect",{x:bx,y:base-h2,width:w,height:h2,fill:css("--s2"),rx:1.5}));
+      }
+    });
+
+    var hl = el("rect",{y:mt,width:bw,height:ih,fill:css("--ink-3"),opacity:0,rx:2});
+    svg.appendChild(hl);
+    var hit = el("rect",{x:ml,y:mt,width:iw,height:ih,fill:"transparent"});
+    svg.appendChild(hit);
+    svg.addEventListener("mousemove",function(e){
+      var r = svg.getBoundingClientRect();
+      var px = (e.clientX - r.left) / r.width * W;
+      var i = Math.max(0, Math.min(n-1, Math.floor((px - ml) / bw)));
+      var d = series[i];
+      hl.setAttribute("x", ml + bw*i); hl.setAttribute("opacity", .09);
+      tip.innerHTML = '<div class="t-d">'+fecha(d[0])+'</div>'+
+        row("Conversaciones", N(d[5]), css("--s1"))+
+        row("Formularios", N(d[6]), css("--s2"))+
+        row("Inversión", G(d[1]), null);
+      tip.style.opacity = 1;
+      var lx = (ml + bw*(i+0.5)) / W * r.width;
+      tip.style.left = Math.max(0, Math.min(r.width - 170, lx - 85)) + "px";
+      tip.style.top = "0px";
+    });
+    svg.addEventListener("mouseleave",function(){ tip.style.opacity = 0; hl.setAttribute("opacity",0); });
+    host.insertBefore(svg, tip);
+  }
+
+  /* ================= tablas ================= */
+  function cpc(spend, contacts){ return contacts > 0 ? G(Math.round(spend/contacts)) : '<span class="muted">—</span>'; }
+
+  function campaigns(){
+    var tb = document.querySelector("#tbl-camp tbody");
+    var maxS = Math.max.apply(null, DATA.campaigns.map(function(c){ return c[3]; }));
+    DATA.campaigns.forEach(function(c){
+      var contacts = c[11] + c[12];
+      var tr = document.createElement("tr");
+      tr.innerHTML =
+        '<td><span class="name" title="'+c[0]+'">'+c[0]+'<small>'+c[1]+' · desde el '+c[13]+'</small></span></td>'+
+        '<td><span class="pill'+(c[2]==="ACTIVA"?" on":"")+'">'+c[2]+'</span></td>'+
+        '<td class="n bar-cell">'+G(c[3])+'<span class="bg"></span><span class="fg" style="width:calc((100% - 24px) * '+(c[3]/maxS).toFixed(3)+')"></span></td>'+
+        '<td class="n">'+N(c[4])+'</td><td class="n">'+N(c[5])+'</td>'+
+        '<td class="n">'+P(c[7])+'</td><td class="n">'+G(c[8])+'</td><td class="n">'+F(c[9])+'</td>'+
+        '<td class="n">'+(contacts||'<span class="muted">0</span>')+'</td>'+
+        '<td class="n">'+cpc(c[3],contacts)+'</td>';
+      tb.appendChild(tr);
+    });
+  }
+
+  function ads(){
+    var tb = document.querySelector("#tbl-ads tbody");
+    var maxS = Math.max.apply(null, DATA.ads.map(function(a){ return a[2]; }));
+    DATA.ads.forEach(function(a){
+      var contacts = a[8] + a[9];
+      var tr = document.createElement("tr");
+      tr.innerHTML =
+        '<td><span class="name" title="'+a[0]+'">'+a[0]+'<small>'+a[1]+'</small></span></td>'+
+        '<td class="n bar-cell">'+G(a[2])+'<span class="bg"></span><span class="fg" style="width:calc((100% - 24px) * '+(a[2]/maxS).toFixed(3)+')"></span></td>'+
+        '<td class="n">'+N(a[3])+'</td><td class="n">'+N(a[4])+'</td>'+
+        '<td class="n">'+P(a[5])+'</td><td class="n">'+G(a[6])+'</td><td class="n">'+N(a[7])+'</td>'+
+        '<td class="n">'+(contacts||'<span class="muted">0</span>')+'</td>'+
+        '<td class="n">'+cpc(a[2],contacts)+'</td>';
+      tb.appendChild(tr);
+    });
+  }
+
+  function bars(hostId, rows, total){
+    var host = document.getElementById(hostId);
+    rows.forEach(function(r){
+      var share = r[1]/total;
+      var d = document.createElement("div");
+      d.className = "plat-row";
+      d.innerHTML =
+        '<div class="pn">'+r[0]+'<small>'+(share*100).toFixed(1).replace(".",",")+'% del gasto</small></div>'+
+        '<div class="track"><i style="width:'+(share*100).toFixed(1)+'%"></i></div>'+
+        '<div class="pv">'+G(r[1])+'<small>'+N(r[8]+r[7])+' contactos</small></div>';
+      host.appendChild(d);
+    });
+  }
+
+  function platTable(){
+    var tb = document.getElementById("plat-tbl");
+    DATA.platforms.forEach(function(p){
+      var c = p[7] + p[8];
+      var tr = document.createElement("tr");
+      tr.innerHTML = '<td>'+p[0]+'</td><td class="n">'+P(p[5])+'</td><td class="n">'+G(p[6])+'</td>'+
+        '<td class="n">'+c+'</td><td class="n">'+cpc(p[1],c)+'</td>';
+      tb.appendChild(tr);
+    });
+  }
+
+  function ageTable(){
+    var tb = document.getElementById("age-tbl");
+    var total = DATA.ages.reduce(function(s,a){ return s + a[1]; }, 0);
+    var maxS = Math.max.apply(null, DATA.ages.map(function(a){ return a[1]; }));
+    DATA.ages.forEach(function(a){
+      var c = a[7] + a[8];
+      var tr = document.createElement("tr");
+      tr.innerHTML = '<td>'+a[0]+'</td>'+
+        '<td class="n bar-cell">'+G(a[1])+'<span class="bg"></span><span class="fg" style="width:calc((100% - 24px) * '+(a[1]/maxS).toFixed(3)+')"></span></td>'+
+        '<td class="n">'+P(a[5])+'</td><td class="n">'+c+'</td><td class="n">'+cpc(a[1],c)+'</td>';
+      tb.appendChild(tr);
+    });
+  }
+
+  spendChart(); resChart(); campaigns(); ads();
+  bars("plat", DATA.platforms, 4862015);
+  bars("gen", DATA.genders, 4862015);
+  platTable(); ageTable();
+})();
+</script>
